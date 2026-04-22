@@ -22,25 +22,6 @@ export const CatFramework = () => (
       </Reveal>
 
       <div className="relative mt-16">
-        {/* S-curve SVG (desktop only) */}
-        <svg
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-10 hidden md:block"
-          viewBox="0 0 1000 200"
-          preserveAspectRatio="none"
-          width="100%"
-          height="200"
-        >
-          <path
-            d="M 200 100 C 320 30, 400 170, 500 100 S 680 30, 800 100"
-            fill="none"
-            stroke="hsl(var(--primary))"
-            strokeOpacity="0.5"
-            strokeWidth="2"
-            strokeDasharray="8 8"
-          />
-        </svg>
-
         <ul className="relative grid gap-10 md:grid-cols-3">
           {STEPS.map((s, i) => (
             <Reveal key={s.title} delay={i * 0.12}>
