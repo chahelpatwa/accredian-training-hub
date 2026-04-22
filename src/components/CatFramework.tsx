@@ -25,14 +25,14 @@ export const CatFramework = () => (
         {/* S-curve SVG (desktop only) */}
         <svg
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-1/2 hidden -translate-y-1/2 md:block"
+          className="pointer-events-none absolute inset-x-0 top-10 hidden md:block"
           viewBox="0 0 1000 200"
           preserveAspectRatio="none"
           width="100%"
           height="200"
         >
           <path
-            d="M 160 100 C 280 40, 380 160, 500 100 S 720 40, 840 100"
+            d="M 200 100 C 320 30, 400 170, 500 100 S 680 30, 800 100"
             fill="none"
             stroke="hsl(var(--primary))"
             strokeOpacity="0.5"
