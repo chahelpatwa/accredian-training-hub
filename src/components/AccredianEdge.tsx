@@ -39,7 +39,7 @@ export const AccredianEdge = () => (
         {/* Dashed connecting arcs (decorative SVG) */}
         <svg
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2"
+          className="pointer-events-none absolute inset-x-0 top-[45%] -translate-y-1/2"
           viewBox="0 0 1200 200"
           preserveAspectRatio="none"
           width="100%"
@@ -61,7 +61,7 @@ export const AccredianEdge = () => (
             return (
               <li
                 key={n.title}
-                className={`flex flex-col items-center text-center ${top ? "" : "mt-32"}`}
+                className={`flex flex-col items-center text-center ${top ? "mb-32" : "mt-32"}`}
               >
                 <Reveal delay={i * 0.07}>
                   <div className="flex flex-col items-center">
