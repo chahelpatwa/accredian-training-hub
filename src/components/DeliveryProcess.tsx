@@ -36,19 +36,12 @@ export const DeliveryProcess = () => (
       <ol className="mt-12 grid gap-6 md:grid-cols-3">
         {STEPS.map((s, i) => (
           <Reveal key={s.title} delay={i * 0.1}>
-            <li className="relative h-full overflow-hidden rounded-2xl border border-divider bg-card p-7 pl-9 shadow-soft transition hover:shadow-elevated">
-              {/* Vertical blue accent bar */}
-              <span className="absolute inset-y-4 left-3 w-1 rounded-full bg-primary" />
-              {/* Number circle */}
-              <span className="absolute -top-3 left-6 inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground shadow-soft">
-                {i + 1}
-              </span>
-
-              <div className="mt-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-soft text-primary">
+            <li className="h-full rounded-2xl border border-divider bg-card p-8 text-center shadow-soft transition hover:shadow-elevated">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-soft">
                 <s.Icon className="h-6 w-6" />
               </div>
               <h3 className="mt-5 text-lg font-bold text-foreground">{s.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
+              <p className="mt-3 text-sm text-muted-foreground">{s.desc}</p>
             </li>
           </Reveal>
         ))}
