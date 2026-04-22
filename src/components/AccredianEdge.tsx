@@ -34,47 +34,29 @@ export const AccredianEdge = () => (
         </p>
       </Reveal>
 
-      {/* Desktop zig-zag timeline */}
+      {/* Desktop clean grid layout */}
       <div className="relative mt-16 hidden lg:block">
-        {/* Dashed connecting arcs (decorative SVG) */}
-        <svg
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-[45%] -translate-y-1/2"
-          viewBox="0 0 1200 200"
-          preserveAspectRatio="none"
-          width="100%"
-          height="200"
-        >
-          <path
-            d="M 60 100 Q 145 20, 230 100 T 400 100 T 570 100 T 740 100 T 910 100 T 1080 100 T 1140 100"
-            fill="none"
-            stroke="hsl(var(--primary))"
-            strokeOpacity="0.4"
-            strokeWidth="2"
-            strokeDasharray="6 6"
-          />
-        </svg>
-
-        <ul className="relative grid grid-cols-7 gap-4">
-          {NODES.map((n, i) => {
-            const top = i % 2 === 0;
-            return (
-              <li
-                key={n.title}
-                className={`flex flex-col items-center text-center ${top ? "mb-32" : "mt-32"}`}
-              >
-                <Reveal delay={i * 0.07}>
-                  <div className="flex flex-col items-center">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-primary bg-white text-primary shadow-soft">
-                      <n.Icon className="h-7 w-7" />
-                    </div>
-                    <h3 className="mt-4 text-sm font-bold text-foreground">{n.title}</h3>
-                    <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{n.desc}</p>
+        <ul className="grid grid-cols-4 gap-x-8 gap-y-14">
+          {NODES.map((n, i) => (
+            <li
+              key={n.title}
+              className={`flex flex-col items-center text-center ${
+                i === 4 ? "col-start-1" : ""
+              }`}
+            >
+              <Reveal delay={i * 0.07}>
+                <div className="flex flex-col items-center">
+                  <div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-divider bg-primary-soft text-primary shadow-soft">
+                    <n.Icon className="h-8 w-8" />
                   </div>
-                </Reveal>
-              </li>
-            );
-          })}
+                  <h3 className="mt-5 text-base font-bold text-foreground">{n.title}</h3>
+                  <p className="mt-2 max-w-[220px] text-sm leading-relaxed text-muted-foreground">
+                    {n.desc}
+                  </p>
+                </div>
+              </Reveal>
+            </li>
+          ))}
         </ul>
       </div>
 
