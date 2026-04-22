@@ -32,7 +32,7 @@ export const CatFramework = () => (
           height="200"
         >
           <path
-            d="M 120 100 C 280 -20, 380 220, 500 100 S 720 -20, 880 100"
+            d="M 160 100 C 280 40, 380 160, 500 100 S 720 40, 840 100"
             fill="none"
             stroke="hsl(var(--primary))"
             strokeOpacity="0.5"
